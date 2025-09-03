@@ -46,3 +46,19 @@ Movie askMovieInfo() {
 
     cout << "\nWhat is the title of the movie? ";
     getline(cin, temp.title);
+
+    cout << "Who directed it? ";
+    getline(cin, temp.director);
+
+    cout << "What year was it released? ";
+    cin >> temp.releaseYear;
+
+    cout << "What is the IMDb rating (0.0 - 10.0)? ";
+    cin >> temp.imdbRating;
+
+    cout << "Did it win an Oscar? (y/n): ";
+    cin >> oscarInput;
+    temp.wonOscar = (oscarInput == 'y' || oscarInput == 'Y');
+
+    return temp;
+}
