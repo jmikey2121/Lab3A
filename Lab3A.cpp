@@ -62,3 +62,16 @@ Movie askMovieInfo() {
 
     return temp;
 }
+
+//function to display movie details
+void showMovie(const Movie &m) {
+    cout << "\n===================================\n";
+    cout << "  Movie Details\n";
+    cout << "===================================\n";
+    cout << " Title:        " << m.title << endl;
+    cout << " Director:     " << m.director << endl;
+    cout << " Release Year: " << m.releaseYear << endl;
+    cout << " IMDb Rating:  " << m.imdbRating << "/10" << endl;
+    cout << " Won Oscar:    " << (m.wonOscar ? "Yes" : "No") << endl;
+    cout << "===================================\n";
+}
