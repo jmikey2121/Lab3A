@@ -26,3 +26,23 @@ int main() {
     Movie second = askMovieInfo();
     Movie third = askMovieInfo();
     Movie fourth = askMovieInfo();
+
+    //Display entries back
+    cout << "\n--- Here are the movies you entered ---\n";
+    showMovie(first);
+    showMovie(second);
+    showMovie(third);
+    showMovie(fourth);
+
+    return 0;
+}
+
+//function to collect movie details
+Movie askMovieInfo() {
+    Movie temp;
+    char oscarInput;
+
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // clear leftover newline
+
+    cout << "\nWhat is the title of the movie? ";
+    getline(cin, temp.title);
